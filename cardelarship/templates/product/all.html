@@ -1,0 +1,35 @@
+<style>
+  
+  h{color: black;
+  font-weight: bold;
+  font-size: 20px;}
+</style>
+<center>
+<h2>Some Of ASH Company Products</h2>
+
+{% for a in pro %}
+<body style="background:#ECDCDB ">
+<center>
+<br>
+
+<img src={{a.c_image.url}} alt="" >
+
+<br>
+<h>{{a.name}}</h>
+<br>
+<h>{{a.carmodel}}</h>
+<br>
+<h>{{a.content}}</h>
+<br>
+<h>price :</h>
+<h>{{a.price}}</h>
+<br>
+<h>avilable :</h>
+<h>{{a.active}}</h>
+<br>
+<br>
+  </center>
+</body>
+</center>
+{%endfor%} 
+

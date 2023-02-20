@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+
+    <style>
+        
+        body {font-family: Arial, Helvetica, sans-serif; }
+        form {padding: 0px; margin-top: 170px; height:0px;}
+        input[type=text] {
+        width: 40%;
+        padding: 12px  10px;
+        margin: 8px 0;
+        display: inline-block;
+        box-sizing: border-box;
+        font-weight: bold;
+        
+
+        }
+        button {
+        background-color: #7B241C;
+        color: white;
+        padding: 9px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 7%;
+        font-weight: bold;
+        }
+        h{color:white;
+            font-weight: bold;
+            font-size: 20px;}
+        </style> 
+        
+            <body>
+              <center>  
+                
+                <form method="post">
+            {%csrf_token%}
+            </div><h3><b>
+             <h>Enter feedback:</h>
+    
+            <input type="text" name="feed" placeholder="Your FeedBack....." required><br><br>
+                
+            <button type="submit" formaction="/feedback/allfeedbacks/" >SubMit</button>
+        <br>
+        <br>
+        </b></h3>
+
+    </div>
+    </div>
+    </div>
+</div>
+</form>
+</center>
+</body>
+
+{% endblock content%}

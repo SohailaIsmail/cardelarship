@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif; }
+
+input[type=text], input[type=password] {
+  width: 50%;
+  padding: 7px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+}
+
+.cancelbtn {
+  width: auto;
+
+}
+
+.imgcontainer {
+  text-align: center;
+}
+
+img.avatar {
+  width: 40%;
+ 
+}
+label{
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  }
+
+</style>
+</head>
+
+
+<body>
+  
+<form  method="post">
+  {% csrf_token %}
+  <div class="imgcontainer">
+    <img src={% static "image/avatar.jpg" %}alt=" " class="avatar">
+  </div>
+  <center>
+    <label><b>Username</b></label>
+    <input type="text" name="username" placeholder="Enter Username"  required>
+    <br>
+    <label><b>Password</b></label>
+    <input type="password" name="Pass" placeholder="Enter Password"  required>
+    <br> 
+    <button type="submit" formaction= "/product/">Login</button>
+    <br>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+    <br>
+    <button type="button" class="cancelbtn">Cancel</button>
+  </center>
+</form>
+
+</body>
+
+{% endblock content%}

@@ -1,0 +1,26 @@
+ <style>
+  h{color: black;
+  font-weight: bold;
+  font-size: 20px;}
+</style>
+<h2>Some Of Feedbacks</h2>
+
+{% for a in feed %}
+<body style="background:#E5E7E9 ">
+    <center>
+<br>
+
+<h>name : sohaila </h>
+{% comment %} <h>{{a.SignUp}}</h> {% endcomment %}
+<h>,Feed : </h>
+<h>{{a.feedback}}</h>
+
+
+{%endfor%}
+</center>
+</body>
+
+
+
+
+
